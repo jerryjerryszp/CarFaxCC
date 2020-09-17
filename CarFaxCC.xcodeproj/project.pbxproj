@@ -23,6 +23,7 @@
 		619C5EFC25140BEE007788D6 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5EFB25140BEE007788D6 /* CarViewModel.swift */; };
 		619C5EFE25142068007788D6 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5EFD25142068007788D6 /* CarsTableViewCell.swift */; };
 		619C5F0025142073007788D6 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619C5EFF25142073007788D6 /* CarsTableViewCell.xib */; };
+		619C5F02251426EE007788D6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5F01251426EE007788D6 /* ImageCache.swift */; };
 		DDE73E150C1C58D16E294D58 /* Pods_CarFaxCCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2CBC45AD649E7DD5E1D5D6 /* Pods_CarFaxCCTests.framework */; };
 		E1117436A5F4B66BF08DDE04 /* Pods_CarFaxCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1A5E60008BC7FA65FD7D3E /* Pods_CarFaxCC.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		619C5EFB25140BEE007788D6 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		619C5EFD25142068007788D6 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		619C5EFF25142073007788D6 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
+		619C5F01251426EE007788D6 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		9A76BE1452A0B38588AE4EAB /* Pods-CarFaxCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCC.debug.xcconfig"; path = "Target Support Files/Pods-CarFaxCC/Pods-CarFaxCC.debug.xcconfig"; sourceTree = "<group>"; };
 		C28263FDA9781539D1FEF04E /* Pods-CarFaxCCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCCTests.debug.xcconfig"; path = "Target Support Files/Pods-CarFaxCCTests/Pods-CarFaxCCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2E08602F9B83088B821BF08 /* Pods-CarFaxCCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCCTests.release.xcconfig"; path = "Target Support Files/Pods-CarFaxCCTests/Pods-CarFaxCCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				619C5EF32513EFB6007788D6 /* Constants.swift */,
+				619C5F01251426EE007788D6 /* ImageCache.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				619C5EF22513E72F007788D6 /* ListingViewModel.swift in Sources */,
 				619C5EC72513E3E1007788D6 /* AppDelegate.swift in Sources */,
 				619C5EFA2513F275007788D6 /* Car.swift in Sources */,
+				619C5F02251426EE007788D6 /* ImageCache.swift in Sources */,
 				619C5EFE25142068007788D6 /* CarsTableViewCell.swift in Sources */,
 				619C5EC92513E3E1007788D6 /* SceneDelegate.swift in Sources */,
 				619C5EFC25140BEE007788D6 /* CarViewModel.swift in Sources */,

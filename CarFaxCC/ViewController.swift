@@ -13,7 +13,6 @@ import RxCocoa
 class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Properties
     let disposeBag = DisposeBag()
@@ -32,6 +31,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         setupViews()
+        showListings()
     }
 
     
@@ -40,8 +40,29 @@ class ViewController: UIViewController {
         navigationItem.title = listingViewModel?.title
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        
+//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        tableView.register(UINib(nibName: String(describing: CarsTableViewCell.self), bundle: nil),
+                                      forCellReuseIdentifier: String(describing: CarsTableViewCell.self))
+        tableView.tableFooterView = UIView()
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
     }
 
+    func showListings() {
+        listingViewModel?.fetchCarViewModels()
+            .observeOn(MainScheduler.instance)
+            .bind(to: tableView.rx.items(
+                cellIdentifier: "CarsTableViewCell",
+                cellType: CarsTableViewCell.self
+            )) { row, viewModel, cell in
+                ImageCache.loadImage(urlString: viewModel.carImageUrl) { (urlString, image) in
+                    
+                    cell.carImageView.image = image
+                }
+                cell.carInfoLabel.text = viewModel.carInfo
+                cell.carDetailsLabel.text = viewModel.carDetails
+                cell.callButton.setTitle(viewModel.phoneNumber, for: .normal)
+        }.disposed(by: disposeBag)
+    }
 }
-

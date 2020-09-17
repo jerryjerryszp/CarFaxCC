@@ -11,6 +11,10 @@ import Foundation
 struct CarViewModel {
     private let car: Car
     
+    var carImageUrl: String {
+        return car.images.medium.first ?? ""
+    }
+    
     var carInfo: String {
         return [String(car.year), car.make, car.model, car.trim].joined(separator: " ")
     }

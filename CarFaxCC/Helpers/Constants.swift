@@ -15,5 +15,6 @@ struct Constants {
     
     struct ListingViewModel {
         static let title = "Carfax"
+        static let ImageCacheKey = "ImageCacheKey"
     }
 }

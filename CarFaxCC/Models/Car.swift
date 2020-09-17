@@ -34,7 +34,8 @@ struct Car: Decodable {
 /// Images
 struct Images: Decodable {
     let baseUrl: String
-    let firstPhoto: FirstPhoto
+    let medium: [String]
+//    let firstPhoto: FirstPhoto
 }
 
 struct FirstPhoto: Decodable {
