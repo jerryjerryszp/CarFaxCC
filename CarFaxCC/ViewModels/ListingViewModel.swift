@@ -10,6 +10,17 @@ import Foundation
 import RxSwift
 
 final class ListingViewModel {
+    let title = Constants.ListingViewModel.title
     
+    private let listingService: ListingServiceProtocol
     
+    init(listingService: ListingServiceProtocol = ListingService()) {
+        self.listingService = listingService
+    }
+    
+    func fetchCarViewModels() -> Observable<[CarViewModel]> {
+        listingService.fetchListingData().map {
+            $0.map { CarViewModel(car: $0) }
+        }
+    }
 }
