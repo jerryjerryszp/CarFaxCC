@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		619C5ED02513E3E5007788D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619C5ECF2513E3E5007788D6 /* Assets.xcassets */; };
 		619C5ED32513E3E5007788D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 619C5ED12513E3E5007788D6 /* LaunchScreen.storyboard */; };
 		619C5EDE2513E3E5007788D6 /* CarFaxCCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5EDD2513E3E5007788D6 /* CarFaxCCTests.swift */; };
+		619C5EE92513E5B8007788D6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5EE82513E5B8007788D6 /* AppCoordinator.swift */; };
+		619C5EF22513E72F007788D6 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C5EF12513E72F007788D6 /* ListingViewModel.swift */; };
 		DDE73E150C1C58D16E294D58 /* Pods_CarFaxCCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2CBC45AD649E7DD5E1D5D6 /* Pods_CarFaxCCTests.framework */; };
 		E1117436A5F4B66BF08DDE04 /* Pods_CarFaxCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1A5E60008BC7FA65FD7D3E /* Pods_CarFaxCC.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		619C5ED92513E3E5007788D6 /* CarFaxCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarFaxCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		619C5EDD2513E3E5007788D6 /* CarFaxCCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFaxCCTests.swift; sourceTree = "<group>"; };
 		619C5EDF2513E3E5007788D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619C5EE82513E5B8007788D6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		619C5EF12513E72F007788D6 /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		9A76BE1452A0B38588AE4EAB /* Pods-CarFaxCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCC.debug.xcconfig"; path = "Target Support Files/Pods-CarFaxCC/Pods-CarFaxCC.debug.xcconfig"; sourceTree = "<group>"; };
 		C28263FDA9781539D1FEF04E /* Pods-CarFaxCCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCCTests.debug.xcconfig"; path = "Target Support Files/Pods-CarFaxCCTests/Pods-CarFaxCCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2E08602F9B83088B821BF08 /* Pods-CarFaxCCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFaxCCTests.release.xcconfig"; path = "Target Support Files/Pods-CarFaxCCTests/Pods-CarFaxCCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +80,6 @@
 				C28263FDA9781539D1FEF04E /* Pods-CarFaxCCTests.debug.xcconfig */,
 				F2E08602F9B83088B821BF08 /* Pods-CarFaxCCTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +115,11 @@
 		619C5EC52513E3E1007788D6 /* CarFaxCC */ = {
 			isa = PBXGroup;
 			children = (
+				619C5EF02513E647007788D6 /* Cells */,
+				619C5EEF2513E63E007788D6 /* Helpers */,
+				619C5EEC2513E61A007788D6 /* Networking */,
+				619C5EEB2513E615007788D6 /* ViewModels */,
+				619C5EEA2513E611007788D6 /* Models */,
 				619C5EC62513E3E1007788D6 /* AppDelegate.swift */,
 				619C5EC82513E3E1007788D6 /* SceneDelegate.swift */,
 				619C5ECA2513E3E1007788D6 /* ViewController.swift */,
@@ -119,6 +127,7 @@
 				619C5ECF2513E3E5007788D6 /* Assets.xcassets */,
 				619C5ED12513E3E5007788D6 /* LaunchScreen.storyboard */,
 				619C5ED42513E3E5007788D6 /* Info.plist */,
+				619C5EE82513E5B8007788D6 /* AppCoordinator.swift */,
 			);
 			path = CarFaxCC;
 			sourceTree = "<group>";
@@ -130,6 +139,42 @@
 				619C5EDF2513E3E5007788D6 /* Info.plist */,
 			);
 			path = CarFaxCCTests;
+			sourceTree = "<group>";
+		};
+		619C5EEA2513E611007788D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		619C5EEB2513E615007788D6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				619C5EF12513E72F007788D6 /* ListingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		619C5EEC2513E61A007788D6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		619C5EEF2513E63E007788D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		619C5EF02513E647007788D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619C5EE92513E5B8007788D6 /* AppCoordinator.swift in Sources */,
 				619C5ECB2513E3E1007788D6 /* ViewController.swift in Sources */,
+				619C5EF22513E72F007788D6 /* ListingViewModel.swift in Sources */,
 				619C5EC72513E3E1007788D6 /* AppDelegate.swift in Sources */,
 				619C5EC92513E3E1007788D6 /* SceneDelegate.swift in Sources */,
 			);
