@@ -21,7 +21,7 @@
                             <constraint firstAttribute="height" constant="280" id="lfL-ZP-9XL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avG-M5-ae8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avG-M5-ae8">
                         <rect key="frame" x="20" y="288" width="374" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Wdt-VW-nNa"/>
@@ -30,12 +30,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpo-pJ-p0o">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpo-pJ-p0o">
                         <rect key="frame" x="20" y="317" width="374" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Nvy-KW-Knk"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

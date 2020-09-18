@@ -60,9 +60,24 @@ class ViewController: UIViewController {
                     
                     cell.carImageView.image = image
                 }
+                
                 cell.carInfoLabel.text = viewModel.carInfo
                 cell.carDetailsLabel.text = viewModel.carDetails
                 cell.callButton.setTitle(viewModel.phoneNumber, for: .normal)
+                
+                cell.callButtonTap
+                    .subscribe(onNext: {
+                        print(viewModel.phoneNumber)
+                        self.dialNumber(number: viewModel.phoneNumber)
+                        
+                    }).disposed(by: cell.disposeBag)
         }.disposed(by: disposeBag)
+    }
+    
+    func dialNumber(number : String) {
+        if let url = URL(string: "tel://\(number)"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }

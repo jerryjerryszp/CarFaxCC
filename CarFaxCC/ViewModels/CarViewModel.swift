@@ -16,13 +16,20 @@ struct CarViewModel {
     }
     
     var carInfo: String {
-        return [String(car.year), car.make, car.model, car.trim].joined(separator: " ")
+        let carTrim = car.trim == "Unspecified" ? "" : car.trim
+        return [String(car.year), car.make, car.model, carTrim].joined(separator: " ")
     }
     
     var carDetails: String {
-        let price = String(format: "%f", car.onePrice)
-        let priceString = "$\(price)"
-        let mileage = String(car.mileage)
+        let onePrice = car.onePrice.rounded(.towardZero)
+        var priceString = "$"
+        if let price = String(format: "%f", onePrice).split(separator: ".").first {
+            priceString = "$\(price)"
+        } else {
+            priceString = String(format: "%f", onePrice)
+        }
+        
+        let mileage = String(car.mileage) + " km"
         let location =  [car.dealer.address, car.dealer.state].joined(separator: ", ")
         
         return [priceString, mileage, location].joined(separator: " | ")

@@ -23,7 +23,7 @@ struct Car: Decodable {
     let trim: String
     
     /// Price
-    let onePrice: Double
+    let onePrice: Float
     
     /// Mileage
     let mileage: Int
