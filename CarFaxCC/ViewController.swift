@@ -36,19 +36,24 @@ class ViewController: UIViewController {
 
     
     // MARK: - Helpers
+    /**
+     Setup views
+     */
     func setupViews() {
         navigationItem.title = listingViewModel?.title
         navigationController?.navigationBar.prefersLargeTitles = true
         
-//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.register(UINib(nibName: String(describing: CarsTableViewCell.self), bundle: nil),
                                       forCellReuseIdentifier: String(describing: CarsTableViewCell.self))
         tableView.tableFooterView = UIView()
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.allowsSelection = false
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
     }
 
+    /**
+     Show the list of cars by binding the data to the table view
+     */
     func showListings() {
         listingViewModel?.fetchCarViewModels()
             .observeOn(MainScheduler.instance)
@@ -74,6 +79,12 @@ class ViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
+    /**
+     Dial number
+    
+     - Parameters:
+         -  number: the number to be called
+     */
     func dialNumber(number : String) {
         if let url = URL(string: "tel://\(number)"),
             UIApplication.shared.canOpenURL(url) {

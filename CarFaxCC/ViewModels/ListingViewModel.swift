@@ -18,6 +18,12 @@ final class ListingViewModel {
         self.listingService = listingService
     }
     
+    /**
+     Map the car models into view models
+    
+     - Returns:
+         -  [CarViewModel]: return the list of car view model
+     */
     func fetchCarViewModels() -> Observable<[CarViewModel]> {
         listingService.fetchListingData().map {
             $0.map { CarViewModel(car: $0) }

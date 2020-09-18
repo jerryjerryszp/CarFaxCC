@@ -42,5 +42,4 @@ struct CarViewModel {
     init(car: Car) {
         self.car = car
     }
-    
 }

@@ -14,7 +14,12 @@ protocol ListingServiceProtocol {
 }
 
 class ListingService: ListingServiceProtocol {
+    /**
+     Fetch listing data
     
+     - Returns:
+         -  [Car]: return the list of cars
+     */
     func fetchListingData() -> Observable<[Car]> {
         return Observable.create { observer -> Disposable in
             
